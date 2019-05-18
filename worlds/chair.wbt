@@ -1,0 +1,74 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.9999561072485872 -0.007923720982305517 -0.004999822201502937 5.157349361075188
+  position 0.04525586885033469 1.639597414860111 0.7481294462536454
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+}
+Solid {
+  translation -3.469446951953614e-18 0.6900000000000004 0
+  children [
+    Group {
+      children [
+        DEF S_SMALLBOX Shape {
+          appearance PBRAppearance {
+            baseColor 0.3333333333333333 0.3411764705882353 0.3254901960784314
+            transparency 0.4
+          }
+          geometry Box {
+            size 0.15 0.05 0.15
+          }
+        }
+        DEF T_BIGSTRUCTUREBAR Transform {
+          translation -0.12168575123732854 -0.35488508584447437 0.1195822626176555
+          rotation 0.7107062656527544 -0.060698462847057655 0.7008653940450483 6.0051924743625404
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0 0
+              }
+              geometry Box {
+                size 0.03 0.7 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.13197832234683232 -0.3488465454337762 0.14747453434968177
+          rotation 0.9965974841877754 0.07850881263062562 -0.025096231787383527 3.023414329561707
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0 0
+              }
+              geometry Box {
+                size 0.03 0.7 0.03
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+Solid {
+  translation 0 0.05 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0 0
+        transparency 0.5
+      }
+      geometry Box {
+        size 0.4 0.1 0.4
+      }
+    }
+  ]
+  name "solid(1)"
+}

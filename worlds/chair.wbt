@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.9999561072485872 -0.007923720982305517 -0.004999822201502937 5.157349361075188
-  position 0.04525586885033469 1.639597414860111 0.7481294462536454
+  orientation 4.02288341418814e-14 -1 4.082744594901682e-15 0.1200000000000103
+  position -0.44397148189572105 0.8505228665160939 3.5356612755431005
 }
 TexturedBackground {
 }
@@ -17,22 +17,33 @@ Solid {
     Group {
       children [
         DEF S_SMALLBOX Shape {
-          appearance PBRAppearance {
-            baseColor 0.3333333333333333 0.3411764705882353 0.3254901960784314
-            transparency 0.4
+          appearance DEF STRUCTURE_COLOR PBRAppearance {
+            baseColor 0.6431372549019608 0 0
           }
           geometry Box {
             size 0.15 0.05 0.15
           }
         }
-        DEF T_BIGSTRUCTUREBAR Transform {
-          translation -0.12168575123732854 -0.35488508584447437 0.1195822626176555
-          rotation 0.7107062656527544 -0.060698462847057655 0.7008653940450483 6.0051924743625404
+        DEF S_SIT Transform {
+          translation 0 0.034999999999999996 0
           children [
             Shape {
-              appearance PBRAppearance {
-                baseColor 0.8 0 0
+              appearance DEF SIT_COLOR PBRAppearance {
+                baseColor 0.7568627450980392 0.49019607843137253 0.06666666666666667
               }
+              geometry Cylinder {
+                height 0.03
+                radius 0.3
+              }
+            }
+          ]
+        }
+        DEF S_BIGSTRUCTUREBAR Transform {
+          translation -0.12168575123732854 -0.35488508584447437 0.1195822626176555
+          rotation -0.708577677079377 -0.0984135662610246 -0.6987363204532745 0.3
+          children [
+            Shape {
+              appearance USE STRUCTURE_COLOR
               geometry Box {
                 size 0.03 0.7 0.03
               }
@@ -40,15 +51,85 @@ Solid {
           ]
         }
         Transform {
-          translation 0.13197832234683232 -0.3488465454337762 0.14747453434968177
-          rotation 0.9965974841877754 0.07850881263062562 -0.025096231787383527 3.023414329561707
+          translation 0.1227884585929131 -0.3533104202139824 0.11818121024063107
+          rotation 0.5537821340414414 0.44588973161965517 -0.703212411190715 5.977999642358436
           children [
             Shape {
-              appearance PBRAppearance {
-                baseColor 0.8 0 0
-              }
+              appearance USE STRUCTURE_COLOR
               geometry Box {
                 size 0.03 0.7 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.12425609253123114 -0.3487935177534022 -0.12503591376424475
+          rotation -0.6454638525174669 0.4668704959454327 -0.6044901613003933 5.969017940639641
+          children [
+            Shape {
+              appearance USE STRUCTURE_COLOR
+              geometry Box {
+                size 0.03 0.7 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation -0.1183779485187013 -0.35284473354136214 -0.12870655311382653
+          rotation -0.6367554192030329 0.12920301444087887 0.7601638752104442 5.984115720267231
+          children [
+            Shape {
+              appearance USE STRUCTURE_COLOR
+              geometry Box {
+                size 0.03 0.7 0.03
+              }
+            }
+          ]
+        }
+        DEF S_STANDINGBAR Transform {
+          translation 0.0011978485635320123 -0.3603061952800951 0.153376952752525
+          rotation -0.12942830759892401 0.1294283082195193 0.9831056027830946 1.5878342331447988
+          children [
+            Shape {
+              appearance USE STRUCTURE_COLOR
+              geometry Box {
+                size 0.03 0.28 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation -0.1562139566298057 -0.36030619452532164 0.005965148652986151
+          rotation -0.6776614856293572 -0.5199879491628099 0.5199879264175922 1.9504410270818102
+          children [
+            Shape {
+              appearance USE STRUCTURE_COLOR
+              geometry Box {
+                size 0.03 0.28 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation -0.00880214362051389 -0.3603061918243469 -0.16144665390771723
+          rotation -0.7040625840151483 -0.7040625985419048 -0.09269161302045041 2.9567376921195057
+          children [
+            Shape {
+              appearance USE STRUCTURE_COLOR
+              geometry Box {
+                size 0.03 0.28 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.15860965755128487 -0.3603061887152273 -0.004034837019940698
+          rotation 0.47690514071114143 0.6215148891082755 -0.6215148665800475 4.031595822224975
+          children [
+            Shape {
+              appearance USE STRUCTURE_COLOR
+              geometry Box {
+                size 0.03 0.28 0.03
               }
             }
           ]
@@ -56,19 +137,4 @@ Solid {
       ]
     }
   ]
-}
-Solid {
-  translation 0 0.05 0
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.8 0 0
-        transparency 0.5
-      }
-      geometry Box {
-        size 0.4 0.1 0.4
-      }
-    }
-  ]
-  name "solid(1)"
 }
